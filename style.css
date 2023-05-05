@@ -1,15 +1,55 @@
- *::after,
- *::before,
- * {
-    box-sizing: border-box;
- }
+:root {
+   --clr-main-900: 273, 85%, 13%;
+   --clr-secondary-400: 150, 100%, 63%;
+   --clr-text-600: 271, 12%, 34%;
+   --clr-bg-200: 276, 100%, 99%;
+   --clr-bg-100: 0, 0%, 100%;
 
- * {
-    font: inherit;
-    margin: 0;
- }
+   --font-family-heading: 'Fraunces';
+   --font-family-body: 'Manrope';
+
+   --fs-80: 5rem;
+   --fs-56: 3.5rem;
+   --fs-32: 2rem;
+   --fs-18: 1.125rem;
+
+   --fw-semi-bold: 600;
+   --fw-regular: 400;
+
+   --lh-80: 5rem; 
+   --lh-64: 4rem;
+   --lh-40: 2.5rem;
+   --lh-32: 2rem;
+}
+
+@font-face {
+   font-family: 'Fraunces';
+   font-display: swap;
+   src: url('./assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf')
+      format('truetype');
+}
+
+*::after,
+*::before,
+* {
+   box-sizing: border-box;
+}
+
+* {
+   font: inherit;
+   margin: 0;
+}
+
+svg,
+img {
+   display: block;
+   max-width: 100%;
+}
+
+
 
 .header {
     background-color: aquamarine;
     min-height: 50px;
 }
+
