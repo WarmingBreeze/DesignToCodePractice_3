@@ -1,0 +1,15 @@
+ *::after,
+ *::before,
+ * {
+    box-sizing: border-box;
+ }
+
+ * {
+    font: inherit;
+    margin: 0;
+ }
+
+.header {
+    background-color: aquamarine;
+    min-height: 50px;
+}
