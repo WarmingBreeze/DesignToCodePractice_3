@@ -10,8 +10,10 @@
 
    --fs-80: 5rem;
    --fs-56: 3.5rem;
+   --fs-50: 3.125rem;
    --fs-32: 2rem;
    --fs-18: 1.125rem;
+   --fs-16: 1rem;
 
    --fw-semi-bold: 600;
    --fw-regular: 400;
@@ -20,15 +22,27 @@
    --lh-64: 4rem;
    --lh-40: 2.5rem;
    --lh-32: 2rem;
+   --lh-28: 1.75rem;
+
+   --width-mobile: 500px;
+   --width-desktop: 1200px; 
 }
 
 @font-face {
    font-family: 'Fraunces';
    font-display: swap;
-   src: url('./assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf')
+   src: local('Fraunces'), url('./assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf')
       format('truetype');
 }
 
+@font-face {
+   font-family: 'Manrope';
+   font-display: swap;
+   src: local('Manrope'), url('./assets/fonts/manrope/Manrope-VariableFont_wght.ttf')
+      format('truetype');
+}
+
+/* CSS reset */
 *::after,
 *::before,
 * {
@@ -46,10 +60,72 @@ img {
    max-width: 100%;
 }
 
-
-
-.header {
-    background-color: aquamarine;
-    min-height: 50px;
+body {
+   background-color: hsl(var(--clr-bg-100));
+   font-family: var(--font-family-body);
+   font-weight: var(--fw-regular);
+   font-size: var(--fs-18);
+   line-height: var(--lh-28);
+   color: hsl(var(--clr-text-600));
 }
 
+/* header */
+.header {
+    background-color: hsl(var(--clr-main-900));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem .8rem;
+}
+
+.header-navbar {
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+}
+
+button.apply-access {
+   background-color: hsl(var(--clr-main-900));
+   border: 0;
+   border-bottom: solid hsl(var(--clr-secondary-400));
+   font-size: var(--fs-16);
+   font-weight: var(--fw-semi-bold);
+   color: hsl(var(--clr-bg-100));
+   letter-spacing: -0.16px;
+}
+
+.header-main-part {
+   display: flex;
+   flex-direction: column;
+   gap: 2.5rem;
+}
+
+.svg-pattern {
+   display: none;
+}
+
+@media (min-width: var(--width-mobile)) and (max-width: var(--width-desktop)) {
+   .svg-pattern {
+
+   }   
+}
+
+@media (min-width: var(--width-desktop)) {
+   .svg-pattern {
+
+   }
+}
+
+.header-heading {
+   font-family: var(--font-family-heading);
+   font-size: var(--fs-50);
+   font-weight: var(--fw-regular);
+   color: hsl(var(--clr-bg-100));
+   padding: .5rem 1rem;
+   line-height: 1;
+}
+
+.header-heading span {
+   border-bottom: solid hsl(var(--clr-secondary-400));
+}
