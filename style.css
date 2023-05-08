@@ -12,6 +12,8 @@
    --fs-56: 3.5rem;
    --fs-50: 3.125rem;
    --fs-32: 2rem;
+   --fs-28: 1.75rem;
+   --fs-20: 1.25rem;
    --fs-18: 1.125rem;
    --fs-16: 1rem;
 
@@ -19,6 +21,7 @@
    --fw-semi-bold: 600;
    --fw-medium: 500;
    --fw-regular: 400;
+   --fw-light: 300;
 
    --lh-80: 5rem; 
    --lh-64: 4rem;
@@ -66,19 +69,21 @@ body {
    background-color: hsl(var(--clr-bg-100));
    font-family: var(--font-family-body);
    font-weight: var(--fw-regular);
-   font-size: var(--fs-18);
+   font-size: var(--fs-16);
    line-height: var(--lh-28);
    color: hsl(var(--clr-text-600));
 }
 
 /* header */
 .header {
-    background-color: hsl(var(--clr-main-900));
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3.5rem;
-    padding: 2rem .8rem;
+   background-color: hsl(var(--clr-main-900));
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 3.5rem;
+   padding: 2rem .8rem;
+   border-radius: 100% / 0 0 25px 25px;
+   height: 472px;
 }
 
 .header-navbar {
@@ -95,6 +100,11 @@ button.apply-access {
    font-weight: var(--fw-semi-bold);
    color: hsl(var(--clr-bg-100));
    letter-spacing: -0.16px;
+}
+
+button.apply-access:hover,
+button.apply-access:focus-visible {
+   color: hsl(var(--clr-secondary-400));
 }
 
 .header-main-part {
@@ -126,28 +136,135 @@ button.apply-access {
    font-weight: var(--fw-medium);
    font-variation-settings: "opsz" 128;
    color: hsl(var(--clr-bg-100));
+   text-align: center;
    padding: 0 1rem;
    line-height: 1;
-}
-
-.header-heading::before {
-   content: " ";
-   white-space: pre;
 }
 
 .header-heading > span:first-child {
    text-decoration: underline hsl(var(--clr-secondary-400)) 2.5px;
 }
 
-.header-heading > span:last-child::before {
-   content:"     ";
-   white-space: pre;
-}
-
-button.learn-more {
+button.primary {
    background-color: hsl(var(--clr-secondary-400));
-   border: 0;
+   border: 2px hsl(var(--clr-secondary-400)) solid;
    font-size: var(--fs-16);
    font-weight: var(--fw-bold);
    padding: .8rem 1.5rem;
 }
+
+button.primary:hover,
+button.primary:focus-visible {
+   background-color: hsl(var(--clr-main-900));
+   color: hsl(var(--clr-secondary-400));
+   border: 2px hsl(var(--clr-secondary-400)) solid;
+   cursor: pointer;
+}
+
+.img-hero {
+   z-index: 1;
+   transform: scale(.9);
+}
+
+
+.main-first-half {
+   padding: 10rem 1rem 5rem;
+   background-color: hsl(var(--clr-bg-200)) ;
+   border-radius: 100% / 0 0 40px 40px;
+   display: flex;
+   flex-direction: column;
+   gap: 2.5rem;
+}
+
+.flex-flow {
+   display: flex;
+   gap: 1.6rem;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.bullet-point {
+   aspect-ratio: 1/1;
+   border-radius: 100%;
+   height: 3rem;
+   font-family: var(--font-family-heading);
+   font-size: var(--fs-20);
+   font-variation-settings: "opsz" 128;
+   color: hsl(var(--clr-main-900));
+   border: solid hsl(var(--clr-main-900)) 1px;
+   display: flex;
+   justify-content: center;
+   place-items: center;
+}
+
+.bullet-title {
+   font-family: var(--font-family-heading);
+   font-size: var(--fs-28);
+   font-weight: var(--fw-semi-bold);
+   font-variation-settings: "opsz" 128;
+   color: hsl(var(--clr-main-900));
+}
+
+.bullet-description {
+   text-align: center;
+}
+
+.main-second-half {
+   padding: 4.5rem 1rem;
+}
+
+.founder-pic {
+   transform: scale(.8);
+}
+
+.founder-words {
+   position: relative;
+   bottom: 85px;
+   padding: 2.5rem 2rem 2rem;
+   background-color: hsl(var(--clr-main-900));
+   color: hsl(var(--clr-bg-100));
+   display: flex;
+   flex-direction: column;
+   gap: 1.5rem;
+}
+
+.founder-words-title {
+   font-family: var(--font-family-heading);
+   font-size: var(--fs-32);
+   font-weight: var(--fw-semi-medium);
+   font-variation-settings: "opsz" 128;
+   text-align: center;
+}
+
+.founder-words-content {
+   font-size: var(--fs-16);
+   font-weight: var(--fw-light);
+   text-align: center;
+}
+
+.founder-words > div {
+   display: grid;
+   place-items: center;
+}
+
+.footer {
+   position: relative;
+   bottom: 85px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 3.5rem;
+}
+
+.social-icons {
+   display: flex;
+   gap: 2em;
+}
+
+.social-icon:hover,
+.social-icon:focus-visible {
+   color: hsl(var(--clr-main-900));
+   cursor: pointer;
+}
+
