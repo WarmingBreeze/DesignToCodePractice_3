@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+    <style>
+        :root {
+            --600: 600px;
+            --1800: 1800px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media only screen and (min-width: var(--600)) and (max-width: var(--1800)) {
+            .container {
+                display: grid;
+                grid-template-rows: 1fr;
+                grid-template-columns: 1fr 1fr;
+                place-items: center;
+                border: black solid 2px;
+            }
+        }
+
+        .block {
+            width: 300px;
+            height: 300px;
+        }
+
+        .block-1 {
+            background-color: orange;
+        }
+
+        .block-2 {
+            background-color: blueviolet;
+        }
+    </style>
+    
+    
+    <title>Frontend Mentor | Workit landing page</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="block block-1"></div>
+        <div class="block block-2"></div>
+    </div>
+  </body>
+</html>
