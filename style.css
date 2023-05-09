@@ -76,26 +76,38 @@ body {
 /* header */
 .header {
    background-color: hsl(var(--clr-main-900));
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   gap: 3.5rem;
-   padding: 2rem .8rem;
    border-radius: 100% / 0 0 130px 130px;
    width: 120%;
    height: 472px;
+   display: grid;
+   justify-items: center;
 }
 
-@media (min-width: 500px) and (max-width: 1200px) {
+@media only screen and (min-width: 500px) and (max-width: 1200px) {
    .header {
-      padding: 2.2rem;
-   }   
+
+   }
+}
+
+@media only screen and (min-width: 1200px) {
+   .header {
+      height: 650px;
+   }
+}
+
+.width-normalizer {
+   width: 83.33%;
 }
 
 .header-navbar {
    display: flex;
-   width: 100%;
    justify-content: space-between;
+}
+
+@media only screen and (min-width: 1200px) {
+   .header-navbar {
+      padding: 3rem 10rem;
+   }
 }
 
 button.apply-access {
@@ -115,9 +127,7 @@ button.apply-access:focus-visible {
 
 .header-main-part {
    display: flex;
-   flex-direction: column;
-   gap: 2.5rem;
-   place-items: center;
+   justify-content: center;
 }
 
 .svg-pattern {
@@ -131,11 +141,27 @@ button.apply-access:focus-visible {
    }   
 }
 
-@media (min-width: var(--width-desktop)) {
+@media (min-width: 1200px) {
    .svg-pattern {
       display: block;
       position: absolute;
    }
+}
+
+.pattern-1 {
+   top: 105px;
+   left: -130px;
+}
+
+.pattern-2 {
+   top: 270px;
+   right: -50px;
+}
+
+.flex-col {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 
 .header-heading {
@@ -149,7 +175,14 @@ button.apply-access:focus-visible {
    line-height: 1;
 }
 
-.header-heading > span:first-child {
+@media only screen and (min-width: 1200px) {
+   .header-heading {
+      width: 70%;
+      font-size: var(--fs-80);
+   }
+}
+
+.header-heading > span {
    text-decoration: underline hsl(var(--clr-secondary-400)) 2.5px;
 }
 
@@ -159,6 +192,14 @@ button.primary {
    font-size: var(--fs-16);
    font-weight: var(--fw-bold);
    padding: .8rem 1.5rem;
+}
+
+@media only screen and (min-width: 1200px) {
+   button.primary {
+      margin: 2.5rem 0 0;
+      font-size: var(--fs-18);
+      padding: auto 2rem;
+   }
 }
 
 button.primary:hover,
@@ -171,18 +212,32 @@ button.primary:focus-visible {
 
 .img-hero {
    z-index: 1;
-   transform: scale(.9);
+   transform: scale(.5);
 }
+
+@media only screen and (min-width: 1200px) {
+   .img-hero {
+      position: absolute;
+      top: 235px;
+   }
+}
+
 
 /* main */
 .main-first-half {
-   padding: 10rem 1rem 5rem;
    background-color: hsl(var(--clr-bg-200)) ;
    border-radius: 100% / 0 0 130px 130px;
-   display: flex;
-   flex-direction: column;
-   gap: 2.5rem;
    width: 120%;
+   display: grid;
+   justify-items: center;
+   position: relative;
+   bottom: 30px;
+   z-index: -1;
+}
+
+@media only screen and (min-width: 1200px) {
+   .main-first-half {
+   }
 }
 
 .flex-flow {
