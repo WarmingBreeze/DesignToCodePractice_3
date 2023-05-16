@@ -9,8 +9,10 @@
    --font-family-body: 'Manrope';
 
    --fs-80: 5rem;
+   --fs-60: 3.75rem;
    --fs-56: 3.5rem;
    --fs-50: 3.125rem;
+   --fs-48: 3rem;
    --fs-32: 2rem;
    --fs-28: 1.75rem;
    --fs-20: 1.25rem;
@@ -83,9 +85,15 @@ body {
    justify-items: center;
 }
 
+@media only screen and (min-width: 500px) and (max-width: 1200px) {
+   .header {
+      height: 540px;
+   }
+}
+
 @media only screen and (min-width: 1200px) {
    .header {
-      height: 650px;
+      height: 730px;
    }
 }
 
@@ -96,6 +104,12 @@ body {
 .header-navbar {
    display: flex;
    justify-content: space-between;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1200px) {
+   .header-navbar {
+      padding: 2rem 2.5rem 3rem;
+   }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -142,10 +156,24 @@ button.apply-access:focus-visible {
    }
 }
 
+@media only screen and (min-width: 500px) and (max-width: 1200px) {
+   .pattern-1 {
+      top: 56px;
+      left: -230px;
+   }
+}
+
 @media only screen and (min-width: 1200px) {
    .pattern-1 {
       top: 105px;
       left: -130px;
+   }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1200px) {
+   .pattern-2 {
+      top: 246px;
+      right: -95px;
    }
 }
 
@@ -171,6 +199,13 @@ button.apply-access:focus-visible {
    text-align: center;
    padding: 0 1rem;
    line-height: 1;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1200px) {
+   .header-heading {
+      width: 70%;
+      font-size: var(--fs-60);
+   }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -203,6 +238,14 @@ button.primary:focus-visible {
    padding: .8rem 1.5rem;
 }
 
+@media only screen and (min-width: 500px) and (max-width: 1200px) {
+   .learn {
+      margin: 2.5rem 0 0;
+      font-size: var(--fs-18);
+      padding: auto 2rem;
+   }   
+}
+
 @media only screen and (min-width: 1200px) {
    .learn {
       margin: 2.5rem 0 0;
@@ -215,6 +258,14 @@ button.primary:focus-visible {
 .img-hero {
    z-index: 1;
    transform: scale(.5);
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1200px) {
+   .img-hero {
+      transform: scale(.7);
+      position: absolute;
+      top: 320px;
+   }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -235,6 +286,12 @@ button.primary:focus-visible {
    position: relative;
    bottom: 30px;
    z-index: -1;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1200px) {
+   .main-first-half {
+      padding: 13rem 7rem 8rem;
+   }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -265,8 +322,9 @@ button.primary:focus-visible {
 @media only screen and (min-width: 500px) and (max-width: 1200px) {
    .flex-flow {
       display: grid;
+      grid-template-columns: 1fr 5fr;
       grid-template-rows: 1fr 1fr;
-      grid-template-columns: 1fr 6fr;
+      gap: .5rem;
    }
 }
 
@@ -326,6 +384,7 @@ button.primary:focus-visible {
    .bullet-description {
       grid-row: 2 / 3;
       grid-column: 2 / 3;
+      text-align: left;
    }
 }
 
@@ -341,6 +400,16 @@ button.primary:focus-visible {
 
 .founder-pic {
    transform: scale(.8);
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1200px) {
+   .founder-pic {
+      aspect-ratio: 1/1;
+      width: 50%;
+      position: relative;
+      bottom: 3%;
+      right: 1%;
+   }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -365,6 +434,16 @@ button.primary:focus-visible {
    gap: 1.5rem;
 }
 
+@media only screen and (min-width: 500px) and (max-width: 1200px) {
+   .founder-words {
+      width: 68%;
+      position: relative;
+      bottom: 28%;
+      left: 29%;
+      padding: 3rem 2.5rem 3rem 3.5rem;
+   }
+}
+
 @media only screen and (min-width: 1200px) {
    .founder-words {
       width: 50%;
@@ -384,6 +463,14 @@ button.primary:focus-visible {
    text-align: center;
 }
 
+@media only screen and (min-width: 500px) and (max-width: 1200px) {
+   .founder-words-title {
+      text-align: left;
+      font-size: var(--fs-48);
+      margin-bottom: 1rem;
+   }
+}
+
 @media only screen and (min-width: 1200px) {
    .founder-words-title {
       text-align: left;
@@ -398,18 +485,34 @@ button.primary:focus-visible {
    text-align: center;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 500px) and (max-width: 1200px) {
    .founder-words-content {
       text-align: left;
-      font-size: var(--fs-18);
+      font-size: var(--fs-16);
+      font-weight: var(--fw-regular);
    }
 }
 
 @media only screen and (min-width: 1200px) {
+   .founder-words-content {
+      text-align: left;
+      font-size: var(--fs-18);
+      font-weight: var(--fw-regular);
+   }
+}
+
+@media only screen and (min-width: 500px) {
    .apply {
       align-self: flex-start;
       font-weight: var(--fw-semi-bold);
       padding: .8rem 1.5rem;
+   }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1200px) {
+   .pattern-3 {
+      left: 55%;
+      top: 70%;
    }
 }
 
